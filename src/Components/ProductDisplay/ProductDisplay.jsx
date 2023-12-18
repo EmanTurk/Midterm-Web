@@ -32,13 +32,13 @@ const ProductDisplay = (props) => {
     </div>
     <div className="productdisplay-right-prices">
         <div className="productdisplay-right-price-old">${product.old_price}</div>
-        <div className="productdisplay-right-price-new">${product.new}</div>
+        <div className="productdisplay-right-price-new">${product.new_price}</div>
         <div className="productdisplay-right-description">
             A lightweight, made with 90% cotton. worn as undershirt or outer garmet.
         </div>
         <div className="productdisplay-right-size">
             <h1>Select Size</h1>
-            <div className="productdisplay-right-size">
+            <div className="productdisplay-right-sizes">
                 <div>S</div>
                 <div>M</div>
                 <div>L</div>
@@ -47,8 +47,8 @@ const ProductDisplay = (props) => {
             </div>
         </div>
         <button>Add To Cart</button>
-        <p className='productdisplay-right-catagory'><span>Category :</span>Women, T-shirt, Crop Top</p>
-        <p className='productdisplay-right-catagory'><span>Tags :</span>Modern Style</p>
+        <p className='productdisplay-right-catagory'><span>Category : </span>Women, T-shirt, Crop Top</p>
+        <p className='productdisplay-right-catagory'><span>Tags : </span>Modern Style</p>
     </div>
 </div>
 
