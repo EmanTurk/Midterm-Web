@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
 import LoginSignUp from "./Pages/LoginSignUp";
+import Login from "./Components/LogIn/LogIn";
+
 import Shop from "./Pages/Shop"; 
 import Cart from "./Pages/Cart"; 
 import Footer from "./Components/Footer/Footer";
@@ -23,7 +25,9 @@ function App() {
           <Route path="product" element={<Product/>}/>
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="/login" element={<LoginSignUp/>}/>
+          <Route path="/register" element={<LoginSignUp/>}/>
+          <Route path="/login" element={<Login />} />
+
 
         </Routes>
         <Footer/>
