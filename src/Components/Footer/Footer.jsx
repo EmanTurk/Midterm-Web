@@ -1,21 +1,19 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../Assets/GLIMMIx.png'
 import instagram_icon from '../Assets/instagram_icon.png'
 import pinterest_icon from '../Assets/pinterest_icon.png'
 import whatsapp_icon from '../Assets/whatsapp_icon.png'
+import G_Logo from '../Assets/G_Logo.png'
 
 const Footer = () => {
   return (
     <div className='footer'>
 
         <div className="footer-logo">
-            <img src={footer_logo} width={80} height={80} alt="" />
-            <p>Glimmix</p>
+            <img src={G_Logo} width={300} height={300} alt="" />
         </div>
         <ul className="footer-links">
             <li>Company</li>
-            <li>Products</li>
             <li>Offices</li>
             <li>About</li>
             <li>Contact Us</li>

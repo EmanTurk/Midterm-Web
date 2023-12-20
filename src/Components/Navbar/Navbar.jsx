@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import {useState} from "react";
 import "./Navbar.css";
-import logo from "../Assets/GLIMMIx.png";
+import G_Logo from '../Assets/G_Logo.png'
 import { Link } from "react-router-dom";
 import cart_icon from "../Assets/cart_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
@@ -14,7 +14,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} width={90} height={90} alt="" />
+        <img src={G_Logo} width={150} height={150} alt="" />
       </div>
       <ul className="nav-menu">
        
