@@ -5,11 +5,11 @@ import logo from "../Assets/GLIMMIx.png";
 import { Link } from "react-router-dom";
 import cart_icon from "../Assets/cart_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
-
+import { AuthContext } from "../../Context/UserContext";
 export const Navbar = () => {
     const [menu,setMenu] = useState("shop");
     const {getTotalCartItems} = useContext(ShopContext);
-    
+    const {user, setUser, logout} = useContext(AuthContext) 
 
   return (
     <div className="navbar">
@@ -24,7 +24,7 @@ export const Navbar = () => {
         <li className={menu === "kids" ? "active" : ""} onClick={() => setMenu("kids")}><Link style={{textDecoration : 'none'}} to='/kids'>Kids</Link> </li>
       </ul>
       <div className="nav-login-cart">
-      <Link to='/login'><button>Loging</button></Link>
+     {!user ? (<Link to='/login'><button>Loging</button></Link>):(<>{user?.email}<button onClick={()=>setUser(null)}>logout</button></>)} 
       <Link to='/cart'>  <img src={cart_icon} alt="" /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>

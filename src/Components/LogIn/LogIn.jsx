@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase"; 
-import { Link } from "react-router-dom"; 
+import { Link,useNavigate } from "react-router-dom"; 
 import "../../Pages/CSS/LoginSignUp.css";
-
-
+import { useContext } from "react";
+import { AuthContext } from "../../Context/UserContext";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+    const {setUser} = useContext(AuthContext);
+    const navigate = useNavigate()
   const handleLogin = async () => {
     try {
      const user = await signInWithEmailAndPassword(auth, email, password);
         console.log(user)
+        await setUser(user.user)
+        navigate("/")
     } catch (error) {
       console.error("Error logging in: ", error);
     }
