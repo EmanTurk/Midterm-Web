@@ -28,11 +28,11 @@
   }
   
   .nav-menu li:hover {
-    background-color: rgb(230, 185, 255); 
+    background-color: rgb(235, 154, 212); 
     color: white;
   }
   .nav-menu li.active {
-    background-color: rgb(230, 185, 255); 
+    background-color: rgb(252, 200, 241); 
     color: white;  /*Check later if you want to add later a line under the selected li item */
 }
   
